@@ -1,6 +1,16 @@
 function getJoke(){
- 
-    fetch('https://official-joke-api.appspot.com/random_joke', // fetch the data from this website.
+    const jokeDiv = document.getElementById('joke');
+    jokeDiv.innerHTML = 'Getting a fresh joke... 🎭';
+
+    //laughter sound function
+    function playLaugh()
+    {
+        const audio =  new Audio('laugh.mp3');
+        audio.volume=0.8;
+        audio.play();
+    }
+    
+ fetch('https://official-joke-api.appspot.com/random_joke', // fetch the data from this website.
     
     //js object    
         {
@@ -11,10 +21,17 @@ function getJoke(){
     )
     .then(response => response.json())   //wait for the joke to come back and json() turns into js object
     .then(data => {
-        document.getElementById('joke'). innerHTML = `<strong>${data.setup}</strong> <br>😄 <em>${data.punchline}</em>`;
+        // Step 1: Show the setup immediately
+        jokeDiv.innerHTML = `<strong>${data.setup}</strong>`;
+        
+        // Step 2: After 1.5s, reveal the punchline
+        setTimeout(() => {
+            jokeDiv.innerHTML +=`<br>😄 <em>${data.punchline}</em>`;
+            playLaugh()
+        }, 2500); //wait 2500ms (2.5s)
     })
     .catch(error => {
-        document.getElementById('joke').innerHTML= 'Opps! Something went wrong';
-        console.log(error);
+        jokeDiv.innerHTML= 'Opps! Something went wrong';
+        console.error(error);
     });
 }
