@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 50px;
+}
+
+#joke{
+    margin:20px;
+    font-size: 20px;
+    color: brown;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    background-color: bisque;
+    color:brown;
+    border-radius: 5%;
+    cursor: pointer;
+}
