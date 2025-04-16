@@ -51,5 +51,5 @@ This small project helped me understand and implement:
 This project is open-source. Feel free to improve, remix, or laugh harder!
 
 ---
-##Made with ❤️ by Shruti Chandra
+Made with ❤️ by Shruti Chandra
 
