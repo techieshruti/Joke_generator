@@ -50,3 +50,6 @@ This small project helped me understand and implement:
 ## **License**
 This project is open-source. Feel free to improve, remix, or laugh harder!
 
+---
+##Made with ❤️ by Shruti Chandra
+
